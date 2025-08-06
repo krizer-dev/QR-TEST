@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" 
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+  android:title="Serial port setup">
+<ListPreference android:key="DEVICE" android:title="Device" android:persistent="true"></ListPreference>
+<ListPreference android:entries="@array/baudrates_name" android:entryValues="@array/baudrates_value" android:key="BAUDRATE" android:persistent="true" android:title="Baud rate"></ListPreference>
+    <!-- 설명 텍스트 추가 -->
+    <Preference
+        android:title="설정 안내"
+        android:summary="• RK3288 포트: /dev/ttyS4\n• RK3399 포트: /dev/ttysWK0\n• Baud rate: 9600"
+        android:enabled="false" />
+</PreferenceScreen>
